@@ -21,3 +21,14 @@ Installing Rust (rustup): ``curl --proto '=https' --tlsv1.2 -sSf https://sh.rust
 Arch (using AUR helper): ``yay -S xorg brightnessctl xsct``
 
 Other distros: Check your repositories for the corresponding packages, I cannot test on other distros so if you encounter any errors please make an issue.
+
+Running the project:
+```
+git clone https://github.com/JustASpeedrunner/screenctrl
+cd screenctrl
+cargo run --release
+```
+
+Note: it does still print brightnessctl outputs to the terminal if you launch it from one. If this is an issue, launch with ``nohup cargo run --release``
+
+Once built, you may move the resulting binary (located at target/release/screenctrl) wherever you like. If you'd like it to be launchable from anywhere, you can place it in your /usr/bin/ or similar.
