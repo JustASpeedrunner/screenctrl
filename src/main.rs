@@ -1,5 +1,3 @@
-#![feature(string_remove_matches)]
-
 use eframe::egui;
 use std::process::Command;
 
@@ -20,8 +18,6 @@ fn main() -> Result<(), eframe::Error> {
     let bcurrout = Command::new("brightnessctl").arg("g").output().expect("Could not get current monitor brightness.");
     let bn = String::from_utf8(bcurrout.stdout).expect("invalid utf8");
     let brightness = bn.trim().parse::<i32>().unwrap();
-
-
 
     let mut brightnessslider = brightness/boffset;
 
