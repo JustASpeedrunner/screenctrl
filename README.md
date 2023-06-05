@@ -13,14 +13,14 @@ Note: This is my first time using egui or even making a gui. Please excuse the s
 Dependencies:
 - Xorg
 - Rust (Cargo)
-- brightnessctl
-- xsct
+- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [xsct](https://github.com/faf0/sct)
 
 Installing rustup (distro independent): ``curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh``
 
 Arch (using AUR helper): ``yay -S xorg brightnessctl xsct``
 
-Other distros: Check your repositories for the corresponding packages, I cannot test on other distros so if you encounter any errors please make an issue.
+Other distros: Check your repositories for the corresponding packages, or install them from source. I cannot test on other distros so if you encounter any errors please make an [issue](https://github.com/JustASpeedrunner/screenctrl/issues).
 
 Running the project:
 ```
