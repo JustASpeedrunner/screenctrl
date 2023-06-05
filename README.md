@@ -39,4 +39,4 @@ Cashtag: $66lol99
 
 Monero: 46ExBswshFq2H4rWoAmY7m1suGNzbmLvk5WE6ZsLhmFy17L8KkDkSrmD673GS8CBZh962RDVVokfdAnJ98mVA4yB5h5DNXQ
 
-Donations are not required but are greatly appreciated! If you donate your name will be listed at the bottom of this file once your donation is confirmed.
+Donations are not required but are greatly appreciated! If you donate your name will be listed at the bottom of this file once your donation is confirmed. To confirm your donation(s), join the [discord](https://discord.gg/gndKuB92u4) and navigate to the "sys.screenctrl" category.
