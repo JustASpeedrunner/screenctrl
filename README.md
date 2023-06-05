@@ -31,3 +31,12 @@ cargo run --release
 Note: it does still print brightnessctl outputs to the terminal if you launch it from one. If this is an issue, launch with ``nohup cargo run --release``
 
 Once built, you may move the resulting binary (located at ``target/release/screenctrl``) wherever you like. If you'd like it to be launchable from anywhere, you can place it in your ``/usr/bin/`` or similar.
+
+## Find the program useful? Want to help me be able to develop it faster?
+Donate to me via CashApp or Monero!
+
+Cashtag: $66lol99
+
+Monero: 46ExBswshFq2H4rWoAmY7m1suGNzbmLvk5WE6ZsLhmFy17L8KkDkSrmD673GS8CBZh962RDVVokfdAnJ98mVA4yB5h5DNXQ
+
+Donations are not required but are greatly appreciated! If you donate your name will be listed at the bottom of this file once your donation is confirmed.

@@ -13,14 +13,13 @@ fn main() -> Result<(), eframe::Error> {
     println!("{:?}", bnm);
     let brightnessmax = bnm.trim().parse::<i32>().unwrap();
     let boffset = brightnessmax/100;
-
-    // Actual fucking spaghetti code, idk if this will work for anyone else so please pr with sensible code :pray:
+        // If you have a better way to do this then please pr, idk what I'm doing.
     let bcurrout = Command::new("brightnessctl").arg("g").output().expect("Could not get current monitor brightness.");
     let bn = String::from_utf8(bcurrout.stdout).expect("invalid utf8");
     let brightness = bn.trim().parse::<i32>().unwrap();
 
-    let mut brightnessslider = brightness/boffset;
 
+    let mut brightnessslider = brightness/boffset;
     eframe::run_simple_native("Screenctrl", options, move |ctx, _frame| {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Monitor controls");
