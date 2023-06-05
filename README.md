@@ -4,7 +4,7 @@ A GUI tool to manage your monitor's brightness, using brightnessctl, and color t
 **Note: This is my first time using egui or even making a gui. Please excuse the simplistic/poor styling, it will improve after core functionality is completed.**
 
 ### Todo list:
-- Fix multi-monitor support <span style="color:Red">(Currently borked)</span>
+- Fix multi-monitor support ***(Currently borked)***
 - Add screen temperature
 - (Maybe) add dual sliders for individual monitor control.
 
