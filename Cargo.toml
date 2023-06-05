@@ -1,0 +1,15 @@
+[package]
+name = "screenctrl"
+version = "0.1.0"
+authors = ["JustASpeedrunner <JustASped@stepbro.wtf>"]
+readme = "README.md"
+description = "A GUI tool to manage your monitor's brightness, using brightnessctl, and color temprature, using xsct, in Xorg."
+homepage = "https://justaspeedrunner.github.io/screenctrl.html"
+repository = "https://github.com/JustASpeedrunner/screenctrl"
+license = "LICENSE-MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+eframe = "*"
