@@ -16,7 +16,7 @@ Dependencies:
 - brightnessctl
 - xsct
 
-Installing Rust (rustup): ``curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh``
+Installing rustup (distro independent): ``curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh``
 
 Arch (using AUR helper): ``yay -S xorg brightnessctl xsct``
 
