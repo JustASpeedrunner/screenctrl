@@ -20,7 +20,6 @@ fn main() -> Result<(), eframe::Error> {
     let bcurrout = Command::new("brightnessctl").arg("g").output().expect("Could not get current monitor brightness.");
     let bn = String::from_utf8(bcurrout.stdout).expect("invalid utf8");
     let brightness = bn.trim().parse::<i32>().unwrap();
-    println!("{} {} {}",brightness, brightnessmax, boffset);
 
 
 
@@ -32,6 +31,5 @@ fn main() -> Result<(), eframe::Error> {
             ui.add(egui::Slider::new(&mut brightnessslider, 0..=100).text("Brightness"));
         });
         let _ = Command::new("brightnessctl").arg("s").arg((brightnessslider*boffset).to_string()).spawn();
-        //println!("{} {} {} {}", brightness, brightnessmax, boffset, (brightnessslider*boffset));
     })
 }
