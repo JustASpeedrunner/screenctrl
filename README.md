@@ -1,7 +1,9 @@
-# Screenctrl
+# [Screenctrl](https://github.com/JustASpeedrunner/screenctrl)
 A GUI tool to manage your monitor's brightness, using brightnessctl, and color temprature, using xsct, in Xorg.
 
 **Note: This is my first time using egui or even making a gui. Please excuse the simplistic/poor styling, it will improve after core functionality is completed.**
+
+**Also let it be known I will not be making consistent updates to this, as I find time and motivation I will but not always. If you'd like to contribute submit a PR.**
 
 ### Todo list:
 - Fix multi-monitor support ***(Currently borked)***
