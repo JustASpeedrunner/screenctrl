@@ -1,8 +1,8 @@
-# [Screenctrl](https://github.com/JustASpeedrunner/screenctrl)
 <div align="left">
   <a href="https://github.com/JustASpeedrunner/ScreenCtrl">
     <img src="images/logo.png" alt="Logo" width="500" height="116">
   </a>
+  <br>
 </div>
 A GUI tool to manage your monitor's brightness, using brightnessctl, and color temprature, using xsct, in Xorg.
 
