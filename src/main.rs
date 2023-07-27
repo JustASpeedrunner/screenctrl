@@ -57,6 +57,6 @@ fn rounding(sliderval:i32) -> i32 {
             return sliderval+2
         } else if (sliderval+1)%5 == 0 {
             return sliderval+1
-        } else {panic!()}
+        } else {panic!("you set the slider value to a non-number")}
     }
 }
