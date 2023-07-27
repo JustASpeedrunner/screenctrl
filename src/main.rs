@@ -8,16 +8,16 @@ fn main() -> Result<(), eframe::Error> {
         ..Default::default()
     };
 
+    // Start brightness related declarations
     let bmax = Command::new("brightnessctl").arg("m").output().expect("Could not get max monitor brightness.");
     let bnm = String::from_utf8(bmax.stdout).expect("invalid utf8");
-    println!("{:?}", bnm);
     let brightnessmax = bnm.trim().parse::<i32>().unwrap();
     let boffset = brightnessmax/100;
         // If you have a better way to do this then please pr, idk what I'm doing.
     let bcurrout = Command::new("brightnessctl").arg("g").output().expect("Could not get current monitor brightness.");
     let bn = String::from_utf8(bcurrout.stdout).expect("invalid utf8");
     let brightness = bn.trim().parse::<i32>().unwrap();
-
+    // End brightness related declarations
 
     let mut brightnessslider = brightness/boffset;
     let mut round = false;
@@ -46,6 +46,8 @@ fn main() -> Result<(), eframe::Error> {
 
 fn rounding(sliderval:i32) -> i32 {
     // This rounds sliderval to the nearest 5%, it's not the prettiest thing but it works.
+    // I tried to fix this with a for loop (Thank you Capp for the idea) and just
+    // iterating through -2..=2 but rust compiler didn't like that.
     if sliderval%5 == 0 {
         return sliderval
     } else {
