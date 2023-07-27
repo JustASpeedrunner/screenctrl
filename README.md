@@ -1,4 +1,9 @@
 # [Screenctrl](https://github.com/JustASpeedrunner/screenctrl)
+<div align="left">
+  <a href="https://github.com/JustASpeedrunner/ScreenCtrl">
+    <img src="images/logo.png" alt="Logo" width="500" height="116">
+  </a>
+</div>
 A GUI tool to manage your monitor's brightness, using brightnessctl, and color temprature, using xsct, in Xorg.
 
 **Note: This is my first time using egui or even making a gui. Please excuse the simplistic/poor styling, it will improve after core functionality is completed.**
@@ -8,7 +13,7 @@ A GUI tool to manage your monitor's brightness, using brightnessctl, and color t
 ### Todo list:
 - Fix multi-monitor support ***(Currently borked)***
 - Add screen temperature
-- (Maybe) add dual sliders for individual monitor control.
+- (Maybe) add dual sliders for individual monitor control when multi-monitor support is fixed.
 
 ## How to install
 Dependencies:
@@ -35,10 +40,8 @@ Note: it does still print brightnessctl outputs to the terminal if you launch it
 Once built, you may move the resulting binary (located at ``target/release/screenctrl``) wherever you like. If you'd like it to be launchable from anywhere, you can place it in your ``/usr/bin/`` or similar.
 
 ## Find the program useful? Want to help me be able to develop it faster?
-Donate to me via CashApp or Monero!
+Donate to me via CashApp!
 
 Cashtag: $66lol99
 
-Monero: 46ExBswshFq2H4rWoAmY7m1suGNzbmLvk5WE6ZsLhmFy17L8KkDkSrmD673GS8CBZh962RDVVokfdAnJ98mVA4yB5h5DNXQ
-
-Donations are not required but are greatly appreciated! If you donate your name will be listed at the bottom of this file once your donation is confirmed. To confirm your donation(s), join the [discord](https://discord.gg/gndKuB92u4) and navigate to the "sys.screenctrl" category.
+Donations are not required but are greatly appreciated! If you donate and want your name listed below dm me on Discord with proof of donation at JustASpeedrunner and I'll add your name!

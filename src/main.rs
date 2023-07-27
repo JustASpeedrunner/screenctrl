@@ -20,11 +20,43 @@ fn main() -> Result<(), eframe::Error> {
 
 
     let mut brightnessslider = brightness/boffset;
+    let mut round = false;
     eframe::run_simple_native("Screenctrl", options, move |ctx, _frame| {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Monitor controls");
             ui.add(egui::Slider::new(&mut brightnessslider, 0..=100).text("Brightness"));
+            ui.checkbox(
+                &mut round,
+                format!(
+                    "Round slider value to nearest 5%",
+                ),
+            );
         });
-        let _ = Command::new("brightnessctl").arg("s").arg((brightnessslider*boffset).to_string()).spawn();
+        match round {
+            false => {let _ = Command::new("brightnessctl").arg("s").arg((brightnessslider*boffset).to_string()).spawn();},
+            true => {
+                {
+                    let _ = Command::new("brightnessctl").arg("s").arg((rounding(brightnessslider)*boffset).to_string()).spawn();
+                    brightnessslider = rounding(brightnessslider);
+                }
+            },
+        }
     })
+}
+
+fn rounding(sliderval:i32) -> i32 {
+    // This rounds sliderval to the nearest 5%, it's not the prettiest thing but it works.
+    if sliderval%5 == 0 {
+        return sliderval
+    } else {
+        if (sliderval-2)%5 == 0 {
+            return sliderval-2
+        } else if (sliderval-1)%5 == 0 {
+            return sliderval-1
+        } else if (sliderval+2)%5 == 0 {
+            return sliderval+2
+        } else if (sliderval+1)%5 == 0 {
+            return sliderval+1
+        } else {panic!()}
+    }
 }
