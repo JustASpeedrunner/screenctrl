@@ -1,10 +1,13 @@
 use eframe::egui;
+use eframe::IconData;
 use std::process::Command;
-
 
 fn main() -> Result<(), eframe::Error> {
     let options = eframe::NativeOptions {
-        initial_window_size: Some(egui::vec2(320.0, 240.0)),
+        initial_window_size: Some(egui::vec2(500.0, 250.0)),
+        icon_data: Some(
+            IconData::try_from_png_bytes(&include_bytes!("../images/icon.png")[..]).unwrap(),
+        ),
         ..Default::default()
     };
 
@@ -21,9 +24,10 @@ fn main() -> Result<(), eframe::Error> {
 
     let mut brightnessslider = brightness/boffset;
     let mut round = false;
-    eframe::run_simple_native("Screenctrl", options, move |ctx, _frame| {
+
+    eframe::run_simple_native("ScreenCtrl by JustASpeedrunner", options.clone(), move |ctx, _frame| {
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.heading("Monitor controls");
+            ui.heading("Monitor Controls");
             ui.add(egui::Slider::new(&mut brightnessslider, 0..=100).text("Brightness"));
             ui.checkbox(
                 &mut round,
