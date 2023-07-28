@@ -45,9 +45,6 @@ fn main() -> Result<(), eframe::Error> {
 }
 
 fn rounding(sliderval:i32) -> i32 {
-    // This rounds sliderval to the nearest 5%, it's not the prettiest thing but it works.
-    // I tried to fix this with a for loop (Thank you Capp for the idea) and just
-    // iterating through -2..=2 but rust compiler didn't like that.
     for num in -2..=2 {
         if (sliderval+num)%5 == 0 {
             return sliderval+num
