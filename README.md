@@ -11,7 +11,7 @@ A GUI tool to manage your monitor's brightness, using brightnessctl, and color t
 - (Maybe) add dual sliders for individual monitor control when multi-monitor support is fixed.
 
 ## How to install
-**PKGBUILD & AUR package are in the works.**
+**PKGBUILD & AUR package are in the works, AUR package will wait until this is feature complete.**
 
 Dependencies:
 - Xorg
