@@ -50,4 +50,5 @@ fn rounding(sliderval:i32) -> i32 {
             return sliderval+num
         }
     }
+    panic!("for loop failed")
 }
