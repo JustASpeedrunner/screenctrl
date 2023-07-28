@@ -1,9 +1,4 @@
-<div align="left">
-  <a href="https://github.com/JustASpeedrunner/ScreenCtrl">
-    <img src="images/logo.png" alt="Logo" width="500" height="116">
-  </a>
-  <br>
-</div>
+# ScreenCtrl
 A GUI tool to manage your monitor's brightness, using brightnessctl, and color temprature, using xsct, in Xorg.
 
 **Note: This is my first time using egui or even making a gui. Please excuse the simplistic/poor styling, it will improve after core functionality is completed.**
