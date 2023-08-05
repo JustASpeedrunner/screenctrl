@@ -7,7 +7,6 @@ A GUI tool to manage your monitor's brightness, using brightnessctl, and color t
 
 ### Todo list:
 - Fix multi-monitor support ***(Currently borked)***
-- Add screen temperature
 - (Maybe) add dual sliders for individual monitor control when multi-monitor support is fixed.
 
 ## How to install

@@ -22,19 +22,33 @@ fn main() -> Result<(), eframe::Error> {
     let brightness = bn.trim().parse::<i32>().unwrap();
     // End brightness related declarations
 
+    // Start screen temp declarations
+    let tcurrout = Command::new("xsct").output().expect("Couldn't get current screen temprature");
+    let tn = String::from_utf8(tcurrout.stdout).expect("Invalid utf8");
+    let v: Vec<&str> = tn.split(' ').collect();
+    // this might not work if xsct changes the way they output shit so watch out for this
+    let temp = v[4].parse::<i32>().unwrap();
+    // End temp declarations
+
+    let mut tempslider = temp;
     let mut brightnessslider = brightness/boffset;
     let mut round = false;
 
     eframe::run_simple_native("ScreenCtrl by JustASpeedrunner", options.clone(), move |ctx, _frame| {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Monitor Controls");
+            ui.separator();
             ui.add(egui::Slider::new(&mut brightnessslider, 0..=100).text("Brightness"));
             ui.checkbox(
                 &mut round,
                 format!(
-                    "Round slider value to nearest 5%",
+                    "Round brightness slider to nearest 5%",
                 ),
             );
+            ui.add(egui::Slider::new(&mut tempslider, 700..=10000).text("Screen Temprature"));
+            ui.label("Minimum screen temp: 700. Maximum: 10000.");
+            ui.separator();
+            ui.label("Thank you for using ScreenCtrl. If you have any suggestions leave them on GitHub, I appreciate your support. -Speedy");
         });
         match round {
             false => {let _ = Command::new("brightnessctl").arg("s").arg((brightnessslider*boffset).to_string()).spawn();},
@@ -45,6 +59,7 @@ fn main() -> Result<(), eframe::Error> {
                 }
             },
         }
+        let _ = Command::new("xsct").arg(tempslider.to_string()).spawn();
     })
 }
 
