@@ -6,6 +6,7 @@ A GUI tool to manage your monitor's brightness, using brightnessctl, and color t
 **Also let it be known I will not be making consistent updates to this, as I find time and motivation I will but not always. If you'd like to contribute submit a PR.**
 
 ### Todo list:
+- Fix color temprature on Wayland
 - Fix multi-monitor support ***(Currently borked)***
 - (Maybe) add dual sliders for individual monitor control when multi-monitor support is fixed.
 
