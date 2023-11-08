@@ -76,7 +76,7 @@ fn main() -> Result<(), eframe::Error> {
                 }
             },
         }
-        // This shit crashes if you close and relaunch screenctrl 💀
+        // This shit crashes the wayland session if you close and relaunch screenctrl 💀
         //match wayland {
         //    true => {
         //        if tempslider >= 6500 {
