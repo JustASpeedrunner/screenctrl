@@ -30,7 +30,7 @@ cd screenctrl
 cargo run --release
 ```
 
-Note: it does still print brightnessctl outputs to the terminal if you launch it from one. If this is an issue, launch with ``nohup cargo run --release``
+Note: it does still print brightnessctl outputs to the terminal if you launch it from one. If this is an issue, install ``nohup`` and launch the program with ``nohup cargo run --release``. Or ``nohup /path/to/screenctrl``.
 
 Once built, you may move the resulting binary (located at ``target/release/screenctrl``) wherever you like. If you'd like it to be launchable from anywhere, you can place it in any directory in your ``$PATH``.
 
